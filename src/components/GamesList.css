@@ -1,0 +1,33 @@
+.pagination .previous{
+	border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+}
+.pagination .next{
+	border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+}
+.pagination-container{
+	width: 300px;
+    display: inline-block;
+}
+.pagination .active a{
+	color:black;
+}
+@media only screen and (max-width: 500px) {
+    .game{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .body{
+        height:auto;
+        overflow-y: scroll;
+    }
+}

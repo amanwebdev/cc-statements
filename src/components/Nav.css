@@ -1,0 +1,29 @@
+.th-mobile{
+	margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+}
+.inner-link{
+    transition: 0.3s ease-in-out;
+}
+.inner-link{
+    padding-left: 20px;
+    padding-right: 25px;
+}
+.inner-link i{
+    padding-left: 4px;
+    padding-right: 4px;
+    vertical-align: middle;
+    transition: 0.3s ease-in-out;
+}
+.inner-link span{
+    vertical-align: middle;
+}
+.inner-link:hover{
+    padding-left: 25px;
+    padding-right: 20px;
+}
+.nav{
+    margin-top:20px;
+    margin-bottom:50px;
+}

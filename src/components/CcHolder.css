@@ -1,0 +1,33 @@
+.amt-row td{
+    text-align: right;
+}
+.amt-head th{
+    text-align: center;
+}
+.bio-tbl{
+    width: 50%;
+    margin:0 auto;
+    left:10%;
+}
+.bio-tbl tr td ,th{padding-top: 10px; padding-bottom:10px}
+.bio{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 100px !important;
+    background: #84bac5;
+}
+.bio .title, .df-status{
+    text-align:left;
+    width: 50%;
+    margin: 0 auto 20px auto;
+}
+table, .statement{
+    width: 80%;
+    margin: 0 auto;
+}
+.statement td, .statement th{
+    border : none;
+}
+.statement tr:hover, .statement td:hover, .statement th:hover{
+    background: #84bac5;
+}
