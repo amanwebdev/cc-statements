@@ -1,19 +1,6 @@
 import { normalize, denormalize, schema } from 'normalizr'
 import { camelizeKeys } from 'humps'
 
-const getNextPageUrl = response => {
-  const link = response.headers.get('link')
-  if (!link) {
-    return null
-  }
-
-  const nextLink = link.split(',').find(s => s.indexOf('rel="next"') > -1)
-  if (!nextLink) {
-    return null
-  }
-
-  return nextLink.split(';')[0].slice(1, -1)
-}
 
 const API_ROOT = 'https://statements-api.herokuapp.com/api/'
 
@@ -48,21 +35,7 @@ const callApi = (endpoint, token, schema) => {
 }
 
 
-const userSchema = new schema.Entity('users', {}, {
-  idAttribute: user => user.login.toLowerCase()
-})
 
-const repoSchema = new schema.Entity('repos', {
-  owner: userSchema
-}, {
-    idAttribute: repo => repo.fullName.toLowerCase()
-  })
-
-const gameSchema = new schema.Entity('games', {}, {
-  idAttribute: game => game.id
-})
-
-const discoverySchema = new schema.Entity("discoveries", {}, {})
 
 const holderSchema = new schema.Entity('holders', {})
 
@@ -77,14 +50,6 @@ const educationTrendSchema = new schema.Entity('educationTrend', {})
 const ageTrendSchema = new schema.Entity('ageTrend', {})
 
 export const Schemas = {
-  USER: userSchema,
-  USER_ARRAY: [userSchema],
-  REPO: repoSchema,
-  REPO_ARRAY: [repoSchema],
-  GAME: gameSchema,
-  GAME_ARRAY: [gameSchema],
-  DISCOVERY: discoverySchema,
-  DISCOVERY_ARRAY: [discoverySchema],
   HOLDER: holderSchema,
   HOLDER_ARRAY: [holderSchema],
   HOLDER_RESP: holdersRespSchema,

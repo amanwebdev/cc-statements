@@ -2,8 +2,6 @@ import React from 'react'
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 
-import {logoutAndRedirect} from '../actions'
-import { loginUser, resizeApp } from '../actions'
 import { Nav } from '../components/Nav'
 
 import './App.css'
@@ -14,17 +12,12 @@ import 'font-awesome/css/font-awesome.min.css'
 export class App extends React.Component {
 
     static propTypes = {
-        logoutAndRedirect: PropTypes.func.isRequired,
         children: PropTypes.node
     }
 
-    handleLogoutClick = e=>{
-        this.props.logoutAndRedirect()
-        e.preventDefault();
-    }
+   
 
     componentWillMount(){
-        window.addEventListener('resize', this.handleWindowSizeChange)
     }
 
     componentDidMount(){
@@ -32,12 +25,8 @@ export class App extends React.Component {
     }
 
     componentWillUnmount() {
-      window.removeEventListener('resize', this.handleWindowSizeChange);
     }
 
-    handleWindowSizeChange = () => {
-        this.props.resizeApp();
-    }
 
     render () {
         return (
@@ -63,9 +52,5 @@ export class App extends React.Component {
         );
     }
 }
-const mapStateToProps = (state) => ({
-  width: state.app.width
-});
-export default connect(mapStateToProps,{
-    logoutAndRedirect, loginUser, resizeApp
-})(App)
+
+export default (App)

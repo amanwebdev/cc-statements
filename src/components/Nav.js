@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router'
 import { Typeahead } from 'react-typeahead'
 import { browserHistory } from 'react-router'
-//import NavWeb from './NavWeb'
-import NavMobile from './NavMobile'
 import './Nav.css'
 
 export class Nav extends Component {
@@ -37,9 +35,7 @@ export class Nav extends Component {
     }
 
     render() {
-        if (this.props.isMobile) {
-            return <NavMobile />
-        } else {
+        
             return (
                 <nav className="nav">
                     <div className="nav-left">
@@ -82,6 +78,6 @@ export class Nav extends Component {
                     </div>
                 </nav>
             );
-        }
+        
     }
 }

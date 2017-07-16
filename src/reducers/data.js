@@ -5,6 +5,7 @@ import { DATA_REQUEST, DATA_SUCCESS, DATA_FAILURE  } from '../constants';
 const initialState = {
     isFetching: true,
     isFailure: false,
+    token: 'test',
     data: {
         games : [],
         discoveries : [],

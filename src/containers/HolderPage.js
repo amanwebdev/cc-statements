@@ -55,9 +55,7 @@ function mapStateToProps(state) {
         isFailure: state.data.isFailure,
         isFetching: state.data.isFetching,
         data: state.data.data,
-        token: state.auth.token,
-        isMobile: state.app.isMobile,
-        isAuthenticated: state.auth.isAuthenticated,
+        token: state.data.token,
     }
 
 }
