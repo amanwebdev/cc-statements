@@ -5,7 +5,7 @@ export default class HoldersTable extends Component {
     render() {
 
         return (
-            <table className="table is-bordered is-striped is-narrow">
+            <table className="table is-bordered is-striped is-narrow hldr-tbl">
                 <thead>
                     <tr>
                         <th>ID</th>

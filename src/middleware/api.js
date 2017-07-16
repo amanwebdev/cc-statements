@@ -15,7 +15,7 @@ const getNextPageUrl = response => {
   return nextLink.split(';')[0].slice(1, -1)
 }
 
-const API_ROOT = 'http://localhost:3000/api/' //'https://games-api-dev.herokuapp.com/api/'
+const API_ROOT = 'https://statements-api.herokuapp.com/api/'
 
 
 const callApi = (endpoint, token, schema) => {

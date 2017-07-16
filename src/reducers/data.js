@@ -3,7 +3,7 @@ import { denormalize, schema } from 'normalizr'
 import { DATA_REQUEST, DATA_SUCCESS, DATA_FAILURE  } from '../constants';
 
 const initialState = {
-    isFetching: false,
+    isFetching: true,
     isFailure: false,
     data: {
         games : [],
@@ -27,7 +27,7 @@ export default createReducer(initialState, {
     },
     [DATA_FAILURE]: (state, payload) => {
         return Object.assign({}, state, {
-            'isFetching':false,
+            'isFetching':true,
             'isFailure': true
         });
     }

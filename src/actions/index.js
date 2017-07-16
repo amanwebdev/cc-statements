@@ -13,7 +13,7 @@ import {
 from '../constants';
 
 
-const baseUrl = "http://localhost:3000/api";
+const baseUrl = "https://statements-api.herokuapp.com/api/";
 
 
 export function loginUserSuccess(token) {

@@ -8,6 +8,7 @@ import { Nav } from '../components/Nav'
 
 import './App.css'
 import 'bulma/css/bulma.css'
+import 'loaders.css/loaders.min.css'
 import 'font-awesome/css/font-awesome.min.css'
 
 export class App extends React.Component {

@@ -78,19 +78,26 @@ class HoldersPage extends Component {
 
 
                 </div>
-                <HoldersTable holders={this.state.holders} showHolder={this.showHolder} />
-                <div className="paginator-hldr">
-                    <ReactPaginate previousLabel={"previous"}
-                        nextLabel={"next"}
-                        breakLabel={<a href="">...</a>}
-                        breakClassName={"break-me"}
-                        pageCount={pageCount}
-                        marginPagesDisplayed={0}
-                        pageRangeDisplayed={2}
-                        onPageChange={this.pageChanged}
-                        containerClassName={"pagination"}
-                        subContainerClassName={"pages pagination"}
-                        activeClassName={"active"} />
+
+                <div style={{ "width": "100%", "height": "400px" }} className={!this.state.isFetching ? 'hidden' : ''}>
+                    <div className="loader"><div className="ball-triangle-path"><div></div><div></div><div></div></div></div>
+                </div>
+
+                <div className={this.state.isFetching ? 'hidden' : ''}>
+                    <HoldersTable holders={this.state.holders} showHolder={this.showHolder} />
+                    <div className="paginator-hldr">
+                        <ReactPaginate previousLabel={"previous"}
+                            nextLabel={"next"}
+                            breakLabel={<a href="">...</a>}
+                            breakClassName={"break-me"}
+                            pageCount={pageCount}
+                            marginPagesDisplayed={0}
+                            pageRangeDisplayed={2}
+                            onPageChange={this.pageChanged}
+                            containerClassName={"pagination"}
+                            subContainerClassName={"pages pagination"}
+                            activeClassName={"active"} />
+                    </div>
                 </div>
             </div>
         )

@@ -70,3 +70,6 @@
 }
 
 /* end .roundedOne */
+.hldr-tbl tbody tr{
+    cursor : pointer;
+}
